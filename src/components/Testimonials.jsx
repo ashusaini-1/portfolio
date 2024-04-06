@@ -23,7 +23,7 @@ const Testimonials = () => {
         </h4>
         <br />
         <Swiper
-          direction={"horizontal"}
+          direction={"vertical"}
           pagination={{
             clickable: true,
           }}
@@ -32,11 +32,9 @@ const Testimonials = () => {
           spaceBetween={40}
           slidesPerView={1.7}
           onSlideChange={(e) => {
-            // console.log(e.realIndex);
             setActiveIndex(e.realIndex);
           }}
-          autoplay={{ delay: 1000 }}
-          modules={[Pagination]}
+          autoplay={{ delay: 1000 }} // Add this autoplay prop
           className="md:h-96 h-[40rem] max-w-3xl"
         >
           {Testimonials.testimonials_content.map((content, i) => (
